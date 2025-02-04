@@ -41,16 +41,45 @@
             margin-bottom: 2rem;
         }
 
-        .hero-image {
+        .hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(40, 62, 104, 0.5); /* Using dark-accent color with opacity */
+            z-index: 1;
+        }
+
+        .hero img {
+            position: absolute;
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            z-index: 0;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .content-image {
             width: 100%;
-            height: 150px;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 1rem;
@@ -76,8 +105,8 @@
 
     <main>
         <section class="hero">
+            <img src="images/contact-center.jpg" alt="Centro de contacto moderno">
             <h1>Contacto</h1>
-            <img src="images/contact-center.jpg" alt="Centro de contacto moderno" class="hero-image">
         </section>
 
         <section class="content">
