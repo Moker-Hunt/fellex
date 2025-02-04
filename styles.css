@@ -30,6 +30,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 100;
+    top: 0;
 }
 
 nav {
@@ -72,8 +73,9 @@ nav {
 
 /* Main Content */
 main {
-    margin-top: 80px;
-    min-height: calc(100vh - 80px - 300px);
+    max-width: 1200px;
+    margin: 60px auto 2rem;
+    padding: 0 1rem;
 }
 
 .hero {
