@@ -10,13 +10,15 @@
         .hero {
             position: relative;
             height: 400px;
+            width: 100%;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            padding: 0 2rem;
+            padding: 0;
+            margin: 0;
         }
 
         .hero::before {
@@ -32,6 +34,8 @@
 
         .hero img {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -44,7 +48,9 @@
             color: white;
             font-size: 2.8rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 0;
+            margin: 0;
+            padding: 0 2rem;
+            max-width: 800px;
         }
 
         .content-image {
@@ -62,6 +68,40 @@
             object-fit: cover;
             border-radius: 8px;
             margin: 1rem 0;
+        }
+
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .content-block {
+            width: 45%;
+            margin: 1rem;
+        }
+
+        .commitment-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        .commitment-content {
+            width: 45%;
+            margin: 1rem;
+        }
+
+        .commitment-image {
+            width: 45%;
+            margin: 1rem;
+        }
+
+        .commitment-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -91,75 +131,100 @@
         <section class="content">
             <article>
                 <h2>Factores Esenciales para Elegir tu Router</h2>
-                <img src="images/wifi-signal.jpg" alt="Señal WiFi y cobertura" class="content-image">
                 
-                <h3>1. Estándares Wi-Fi</h3>
-                <p>Los routers modernos utilizan diferentes estándares Wi-Fi:</p>
-                <ul>
-                    <li><strong>Wi-Fi 6 (802.11ax):</strong> El más reciente y potente, ideal para hogares con muchos dispositivos conectados</li>
-                    <li><strong>Wi-Fi 5 (802.11ac):</strong> Excelente para la mayoría de los hogares modernos</li>
-                    <li><strong>Wi-Fi 4 (802.11n):</strong> Más básico, pero suficiente para uso general</li>
-                </ul>
+                <div class="two-columns">
+                    <div class="content-block">
+                        <h3>Velocidad y Estándares WiFi</h3>
+                        <p>Los routers modernos ofrecen diferentes estándares WiFi:</p>
+                        <ul>
+                            <li>WiFi 6 (802.11ax): Última generación</li>
+                            <li>WiFi 5 (802.11ac): Muy común actualmente</li>
+                            <li>WiFi 4 (802.11n): Para uso básico</li>
+                        </ul>
+                    </div>
 
-                <h3>2. Bandas de Frecuencia</h3>
-                <img src="images/dual-band.jpg" alt="Router de doble banda en funcionamiento" class="article-image">
-                <p>Los routers pueden operar en diferentes bandas:</p>
-                <ul>
-                    <li><strong>2.4 GHz:</strong> Mayor alcance pero menor velocidad</li>
-                    <li><strong>5 GHz:</strong> Menor alcance pero mayor velocidad</li>
-                    <li><strong>Routers de doble banda:</strong> Ofrecen lo mejor de ambos mundos</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Cobertura y Alcance</h3>
+                        <p>Factores que afectan la cobertura:</p>
+                        <ul>
+                            <li>Tamaño de tu hogar</li>
+                            <li>Número de paredes y obstáculos</li>
+                            <li>Interferencias electromagnéticas</li>
+                        </ul>
+                    </div>
 
-                <h3>3. Características Avanzadas</h3>
-                <p>Considera estas funciones adicionales:</p>
-                <ul>
-                    <li>Tecnología MU-MIMO para múltiples conexiones simultáneas</li>
-                    <li>Beamforming para mejor dirección de la señal</li>
-                    <li>QoS (Quality of Service) para priorizar el tráfico</li>
-                    <li>Puertos Gigabit Ethernet para conexiones por cable</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Bandas de Frecuencia</h3>
+                        <p>Las bandas disponibles son:</p>
+                        <ul>
+                            <li>2.4 GHz: Mayor alcance</li>
+                            <li>5 GHz: Mayor velocidad</li>
+                            <li>Dual-band: Ambas frecuencias</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>Características Adicionales</h3>
+                        <p>Funciones importantes a considerar:</p>
+                        <ul>
+                            <li>Control parental</li>
+                            <li>Puertos USB</li>
+                            <li>QoS (Quality of Service)</li>
+                            <li>Seguridad WPA3</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
 
             <article>
                 <h2>Recomendaciones por Tipo de Uso</h2>
+                
+                <div class="two-columns">
+                    <div class="content-block">
+                        <h3>Para Hogares Pequeños</h3>
+                        <p>Un router básico de doble banda con Wi-Fi 5 suele ser suficiente. Características clave:</p>
+                        <ul>
+                            <li>Velocidad de al menos 1200 Mbps</li>
+                            <li>Cobertura para 50-80 metros cuadrados</li>
+                            <li>Soporte para 5-10 dispositivos</li>
+                        </ul>
+                    </div>
 
-                <h3>Para Hogares Pequeños</h3>
-                <p>Un router básico de doble banda con Wi-Fi 5 suele ser suficiente. Características clave:</p>
-                <ul>
-                    <li>Velocidad de al menos 1200 Mbps</li>
-                    <li>Cobertura para 50-80 metros cuadrados</li>
-                    <li>Soporte para 5-10 dispositivos</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Para Hogares Grandes</h3>
+                        <p>Considera un sistema mesh o un router de alta gama:</p>
+                        <ul>
+                            <li>Wi-Fi 6 para mejor gestión de múltiples dispositivos</li>
+                            <li>Sistema mesh para eliminar puntos muertos</li>
+                            <li>Antenas externas para mayor alcance</li>
+                        </ul>
+                    </div>
 
-                <h3>Para Hogares Grandes</h3>
-                <p>Considera un sistema mesh o un router de alta gama:</p>
-                <ul>
-                    <li>Wi-Fi 6 para mejor gestión de múltiples dispositivos</li>
-                    <li>Sistema mesh para eliminar puntos muertos</li>
-                    <li>Antenas externas para mayor alcance</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Para Gaming y Streaming</h3>
+                        <p>Busca estas características específicas:</p>
+                        <ul>
+                            <li>Procesador de alta velocidad</li>
+                            <li>Priorización de tráfico gaming</li>
+                            <li>Puertos Gigabit para conexiones directas</li>
+                            <li>Baja latencia y alto rendimiento</li>
+                        </ul>
+                    </div>
 
-                <h3>Para Gaming y Streaming</h3>
-                <p>Busca estas características específicas:</p>
-                <ul>
-                    <li>Procesador de alta velocidad</li>
-                    <li>Priorización de tráfico gaming</li>
-                    <li>Puertos Gigabit para conexiones directas</li>
-                    <li>Baja latencia y alto rendimiento</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Consejos de Mantenimiento</h3>
+                        <p>Para mantener tu router funcionando óptimamente:</p>
+                        <ul>
+                            <li>Actualiza el firmware regularmente</li>
+                            <li>Ubica el router en una posición central y elevada</li>
+                            <li>Evita interferencias de otros dispositivos electrónicos</li>
+                            <li>Cambia las contraseñas periódicamente</li>
+                            <li>Limpia el router físicamente para evitar sobrecalentamiento</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
 
-            <article>
-                <h2>Consejos de Mantenimiento</h2>
-                <p>Para mantener tu router funcionando óptimamente:</p>
-                <ul>
-                    <li>Actualiza el firmware regularmente</li>
-                    <li>Ubica el router en una posición central y elevada</li>
-                    <li>Evita interferencias de otros dispositivos electrónicos</li>
-                    <li>Cambia las contraseñas periódicamente</li>
-                    <li>Limpia el router físicamente para evitar sobrecalentamiento</li>
-                </ul>
-            </article>
         </section>
     </main>
 
@@ -174,10 +239,13 @@
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </div>
+            
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p>Teléfono: <a href="tel:+525555123456">+52 55 5512 3456</a></p>
-                <p>Email: <a href="mailto:info@fellex.org">info@fellex.org</a></p>
+                <ul>
+                    <li><p>Teléfono: <a href="tel:+525555123456">+52 55 5512 3456</a></p></li>
+                    <li><p>Email: <a href="mailto:info@fellex.org">info@fellex.org</a></p></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">

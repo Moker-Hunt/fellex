@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Fellex</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/lorenzo-sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         .about-section {
@@ -28,21 +29,21 @@
             border-radius: 8px;
         }
 
-        .values-list {
+        .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
 
-        .value-item {
+        .value-box {
             background: var(--light-gray);
             padding: 1.5rem;
             border-radius: 8px;
             text-align: center;
         }
 
-        .value-item h4 {
+        .value-box h3 {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
@@ -122,6 +123,64 @@
             border-radius: 8px;
             margin: 1rem 0;
         }
+        
+        .mission-vision-container {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .mission-vision-image {
+            width: 50%;
+        }
+        
+        .mission-vision-content {
+            width: 50%;
+        }
+        
+        .mission-vision-box {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .commitment-container {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .commitment-content {
+            width: 50%;
+        }
+        
+        .commitment-image {
+            width: 50%;
+        }
+        
+        .commitment-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features-list li {
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -150,36 +209,40 @@
         <section class="content">
             <div class="about-section">
                 <h2>¿Quiénes Somos?</h2>
-                <img src="images/office-work.jpg" alt="Ambiente de trabajo profesional" class="content-image">
                 <p>Fellex es una plataforma líder en información sobre telecomunicaciones y tecnología en México. Nos dedicamos a proporcionar información clara, precisa y actualizada sobre servicios de internet, tecnologías de comunicación y tendencias digitales.</p>
-                
-                <div class="mission-vision">
-                    <div>
-                        <h3>Nuestra Misión</h3>
-                        <p>Empoderar a los usuarios mexicanos con conocimiento tecnológico accesible y práctico, permitiéndoles tomar decisiones informadas sobre sus servicios de telecomunicaciones.</p>
+              
+                <div class="mission-vision-container">
+                    <div class="mission-vision-image">
+                        <img src="images/office-work.jpg" alt="Ambiente de trabajo profesional">
                     </div>
-                    <div>
-                        <h3>Nuestra Visión</h3>
-                        <p>Ser la fuente más confiable y completa de información sobre telecomunicaciones en México, contribuyendo a la transformación digital del país.</p>
+                    <div class="mission-vision-content">
+                        <div class="mission-vision-box">
+                            <h3>Nuestra Misión</h3>
+                            <p>Empoderar a los usuarios mexicanos con conocimiento tecnológico accesible y práctico, permitiéndoles tomar decisiones informadas sobre sus servicios de telecomunicaciones.</p>
+                        </div>
+                        <div class="mission-vision-box">
+                            <h3>Nuestra Visión</h3>
+                            <p>Ser la fuente más confiable y completa de información sobre telecomunicaciones en México, contribuyendo a la transformación digital del país.</p>
+                        </div>
                     </div>
                 </div>
 
                 <h3>Nuestros Valores</h3>
-                <div class="values-list">
-                    <div class="value-item">
-                        <h4>Transparencia</h4>
+                <div class="values-grid">
+                    <div class="value-box">
+                        <h3>Transparencia</h3>
                         <p>Información clara y honesta sin sesgos comerciales</p>
                     </div>
-                    <div class="value-item">
-                        <h4>Accesibilidad</h4>
+                    <div class="value-box">
+                        <h3>Accesibilidad</h3>
                         <p>Contenido comprensible para todos los niveles de conocimiento</p>
                     </div>
-                    <div class="value-item">
-                        <h4>Actualización</h4>
+                    <div class="value-box">
+                        <h3>Actualización</h3>
                         <p>Información constantemente actualizada sobre nuevas tecnologías</p>
                     </div>
-                    <div class="value-item">
-                        <h4>Utilidad</h4>
+                    <div class="value-box">
+                        <h3>Utilidad</h3>
                         <p>Enfoque en contenido práctico y aplicable</p>
                     </div>
                 </div>
@@ -187,26 +250,34 @@
 
             <div class="about-section">
                 <h2>Nuestro Compromiso</h2>
-                <img src="images/customer-service.jpg" alt="Servicio al cliente" class="article-image">
-                <p>En Fellex, nos comprometemos a:</p>
-                <ul>
-                    <li>Proporcionar información imparcial y objetiva</li>
-                    <li>Mantener nuestro contenido actualizado con las últimas tendencias</li>
-                    <li>Respetar la privacidad de nuestros usuarios</li>
-                    <li>Ofrecer recursos educativos de alta calidad</li>
-                    <li>Contribuir al desarrollo digital de México</li>
-                </ul>
+                <div class="commitment-container">
+                    <div class="commitment-content">
+                        <p>En Fellex, nos comprometemos a:</p>
+                        <ul class="commitment-list">
+                            <li>Proporcionar información imparcial y objetiva</li>
+                            <li>Mantener nuestro contenido actualizado con las últimas tendencias</li>
+                            <li>Respetar la privacidad de nuestros usuarios</li>
+                            <li>Ofrecer recursos educativos de alta calidad</li>
+                            <li>Contribuir al desarrollo digital de México</li>
+                        </ul>
+                    </div>
+                    <div class="commitment-image">
+                        <img src="images/customer-service.jpg" alt="Servicio al cliente">
+                    </div>
+                </div>
             </div>
 
             <div class="about-section">
                 <h2>¿Por Qué Elegirnos?</h2>
-                <ul>
-                    <li>Experiencia en el sector de telecomunicaciones</li>
-                    <li>Contenido actualizado y relevante para el mercado mexicano</li>
-                    <li>Información práctica y fácil de entender</li>
-                    <li>Compromiso con la privacidad y seguridad</li>
-                    <li>Enfoque en las necesidades reales de los usuarios</li>
-                </ul>
+                <div class="features-container">
+                    <ul class="features-list">
+                        <li>Experiencia en el sector de telecomunicaciones</li>
+                        <li>Contenido actualizado y relevante para el mercado mexicano</li>
+                        <li>Información práctica y fácil de entender</li>
+                        <li>Compromiso con la privacidad y seguridad</li>
+                        <li>Enfoque en las necesidades reales de los usuarios</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -224,8 +295,10 @@
             </div>
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p>Teléfono: <a href="tel:+525555123456">+52 55 5512 3456</a></p>
-                <p>Email: <a href="mailto:info@fellex.org">info@fellex.org</a></p>
+                <ul>
+                    <li><p>Teléfono: <a href="tel:+525555123456">+52 55 5512 3456</a></p></li>
+                    <li><p>Email: <a href="mailto:info@fellex.org">info@fellex.org</a></p></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">

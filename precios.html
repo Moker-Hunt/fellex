@@ -10,13 +10,15 @@
         .hero {
             position: relative;
             height: 400px;
+            width: 100%;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            padding: 0 2rem;
+            padding: 0;
+            margin: 0;
         }
 
         .hero::before {
@@ -32,6 +34,8 @@
 
         .hero img {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -44,7 +48,8 @@
             color: white;
             font-size: 2.8rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 0;
+            margin: 0;
+            padding: 0 2rem;
             max-width: 800px;
         }
 
@@ -63,6 +68,59 @@
             object-fit: cover;
             border-radius: 8px;
             margin: 1rem 0;
+        }
+
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .content-block {
+            flex-basis: 45%;
+            margin: 1rem;
+        }
+
+        .tech-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        .tech-block img {
+            width: 40%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem;
+        }
+
+        .tech-content {
+            width: 55%;
+            margin: 1rem;
+        }
+
+        .market-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        .market-block img {
+            width: 40%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem;
+        }
+
+        .market-content {
+            width: 55%;
+            margin: 1rem;
+        }
+
+        .price-factors {
+            margin: 2rem 0;
         }
     </style>
 </head>
@@ -92,91 +150,159 @@
         <section class="content">
             <article>
                 <h2>Factores que Influirán en los Precios</h2>
-                <img src="images/price-analysis.jpg" alt="Análisis de precios y tendencias" class="content-image">
                 
                 <h3>1. Avances Tecnológicos</h3>
-                <p>Los desarrollos tecnológicos afectarán los precios de diferentes maneras:</p>
-                <ul>
-                    <li>Implementación de redes 5G y 6G</li>
-                    <li>Mejoras en la infraestructura de fibra óptica</li>
-                    <li>Nuevas tecnologías de transmisión de datos</li>
-                    <li>Automatización de servicios</li>
-                </ul>
+                <div class="tech-block">
+                    <img src="images/tech-analysis.jpg" alt="Análisis tecnológico">
+                    <div class="tech-content">
+                        <p>Los desarrollos tecnológicos afectarán los precios de diferentes maneras:</p>
+                        <ul>
+                            <li>Implementación de redes 5G y 6G</li>
+                            <li>Mejoras en la infraestructura de fibra óptica</li>
+                            <li>Nuevas tecnologías de transmisión de datos</li>
+                            <li>Automatización de servicios</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <h3>2. Competencia en el Mercado</h3>
-                <img src="images/market-competition.jpg" alt="Competencia en el mercado de telecomunicaciones" class="article-image">
-                <p>La dinámica del mercado influirá en los precios:</p>
-                <ul>
-                    <li>Entrada de nuevos proveedores</li>
-                    <li>Consolidación de empresas existentes</li>
-                    <li>Servicios de internet satelital</li>
-                    <li>Competencia en áreas rurales</li>
-                </ul>
+                <div class="market-block">
+                    <img src="images/market-competition.jpg" alt="Competencia en el mercado">
+                    <div class="market-content">
+                        <p>La dinámica del mercado influirá en los precios:</p>
+                        <ul>
+                            <li>Entrada de nuevos proveedores</li>
+                            <li>Consolidación de empresas existentes</li>
+                            <li>Servicios de internet satelital</li>
+                            <li>Competencia en áreas rurales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="price-factors">
+                    <h3>Factores que Podrían Reducir los Precios</h3>
+                    <p>Varios elementos contribuirán a la reducción de costos:</p>
+                    <ul>
+                        <li>Mejoras en eficiencia tecnológica</li>
+                        <li>Mayor competencia en el mercado</li>
+                        <li>Políticas gubernamentales de inclusión digital</li>
+                        <li>Economías de escala en infraestructura</li>
+                        <li>Automatización de servicios y mantenimiento</li>
+                    </ul>
+                </div>
+
+                <div class="price-factors">
+                    <h3>Factores que Podrían Aumentar los Precios</h3>
+                    <p>Algunos elementos podrían presionar los precios al alza:</p>
+                    <ul>
+                        <li>Costos de implementación de nuevas tecnologías</li>
+                        <li>Aumento en la demanda de ancho de banda</li>
+                        <li>Inversiones en ciberseguridad</li>
+                        <li>Regulaciones más estrictas</li>
+                    </ul>
+                </div>
+
+                <div class="price-factors">
+                    <h3>Recomendaciones para Usuarios</h3>
+                    <p>Para optimizar costos en el futuro:</p>
+                    <ul>
+                        <li>Comparar regularmente las ofertas disponibles</li>
+                        <li>Considerar planes flexibles según el uso</li>
+                        <li>Evaluar paquetes combinados de servicios</li>
+                        <li>Mantenerse informado sobre nuevas tecnologías</li>
+                        <li>Participar en programas de fidelización</li>
+                    </ul>
+                </div>
             </article>
 
             <article>
                 <h2>Tendencias de Precios Esperadas</h2>
+                
+                <div class="two-columns">
+                    <div class="content-block">
+                        <h3>Corto Plazo (1-2 años)</h3>
+                        <p>Las expectativas inmediatas incluyen:</p>
+                        <ul>
+                            <li>Estabilización de precios en áreas urbanas</li>
+                            <li>Mejores velocidades por el mismo precio</li>
+                            <li>Más opciones de planes personalizados</li>
+                            <li>Paquetes con servicios adicionales</li>
+                        </ul>
+                    </div>
 
-                <h3>Corto Plazo (1-2 años)</h3>
-                <p>Las expectativas inmediatas incluyen:</p>
-                <ul>
-                    <li>Estabilización de precios en áreas urbanas</li>
-                    <li>Mejores velocidades por el mismo precio</li>
-                    <li>Más opciones de planes personalizados</li>
-                    <li>Paquetes con servicios adicionales</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Mediano Plazo (3-5 años)</h3>
+                        <p>Se prevén estos cambios:</p>
+                        <ul>
+                            <li>Reducción gradual de precios en planes básicos</li>
+                            <li>Nuevos modelos de precios basados en uso</li>
+                            <li>Mayor competencia en servicios premium</li>
+                            <li>Planes específicos para IoT y dispositivos conectados</li>
+                        </ul>
+                    </div>
 
-                <h3>Mediano Plazo (3-5 años)</h3>
-                <p>Se prevén estos cambios:</p>
-                <ul>
-                    <li>Reducción gradual de precios en planes básicos</li>
-                    <li>Nuevos modelos de precios basados en uso</li>
-                    <li>Mayor competencia en servicios premium</li>
-                    <li>Planes específicos para IoT y dispositivos conectados</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Largo Plazo (5+ años)</h3>
+                        <p>Las proyecciones a futuro sugieren:</p>
+                        <ul>
+                            <li>Internet de alta velocidad como servicio básico</li>
+                            <li>Precios más accesibles en áreas rurales</li>
+                            <li>Planes ilimitados como estándar</li>
+                            <li>Integración con servicios de computación en la nube</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h3>Largo Plazo (5+ años)</h3>
-                <p>Las proyecciones a futuro sugieren:</p>
-                <ul>
-                    <li>Internet de alta velocidad como servicio básico</li>
-                    <li>Precios más accesibles en áreas rurales</li>
-                    <li>Planes ilimitados como estándar</li>
-                    <li>Integración con servicios de computación en la nube</li>
-                </ul>
+                
             </article>
 
             <article>
-                <h2>Factores que Podrían Reducir los Precios</h2>
-                <p>Varios elementos contribuirán a la reducción de costos:</p>
-                <ul>
-                    <li>Mejoras en eficiencia tecnológica</li>
-                    <li>Mayor competencia en el mercado</li>
-                    <li>Políticas gubernamentales de inclusión digital</li>
-                    <li>Economías de escala en infraestructura</li>
-                    <li>Automatización de servicios y mantenimiento</li>
-                </ul>
+                <h2>Tendencias de Precios de Internet</h2>
+                
+                <div class="two-columns">
+                    <div class="content-block">
+                        <h3>Factores de Precio</h3>
+                        <p>Elementos que influyen en el costo:</p>
+                        <ul>
+                            <li>Velocidad de conexión</li>
+                            <li>Tipo de tecnología</li>
+                            <li>Ubicación geográfica</li>
+                        </ul>
+                    </div>
 
-                <h3>Factores que Podrían Aumentar los Precios</h3>
-                <p>Algunos elementos podrían presionar los precios al alza:</p>
-                <ul>
-                    <li>Costos de implementación de nuevas tecnologías</li>
-                    <li>Aumento en la demanda de ancho de banda</li>
-                    <li>Inversiones en ciberseguridad</li>
-                    <li>Regulaciones más estrictas</li>
-                </ul>
+                    <div class="content-block">
+                        <h3>Planes Populares</h3>
+                        <p>Tipos de planes más comunes:</p>
+                        <ul>
+                            <li>Básico: 20-50 Mbps</li>
+                            <li>Intermedio: 100-200 Mbps</li>
+                            <li>Premium: 300+ Mbps</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>Servicios Adicionales</h3>
+                        <p>Extras que pueden incluirse:</p>
+                        <ul>
+                            <li>TV por cable</li>
+                            <li>Telefonía fija</li>
+                            <li>Servicios móviles</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>Consejos de Ahorro</h3>
+                        <p>Cómo optimizar costos:</p>
+                        <ul>
+                            <li>Comparar proveedores</li>
+                            <li>Paquetes combinados</li>
+                            <li>Promociones especiales</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
 
-            <article>
-                <h2>Recomendaciones para Usuarios</h2>
-                <p>Para optimizar costos en el futuro:</p>
-                <ul>
-                    <li>Comparar regularmente las ofertas disponibles</li>
-                    <li>Considerar planes flexibles según el uso</li>
-                    <li>Evaluar paquetes combinados de servicios</li>
-                    <li>Mantenerse informado sobre nuevas tecnologías</li>
-                    <li>Participar en programas de fidelización</li>
-                </ul>
-            </article>
+            
         </section>
     </main>
 
@@ -193,8 +319,10 @@
             </div>
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p>Teléfono: <a href="tel:+525555123456">+52 55 5512 3456</a></p>
-                <p>Email: <a href="mailto:info@fellex.org">info@fellex.org</a></p>
+                <ul>
+                    <li><p>Teléfono: <a href="tel:+525555123456">+52 55 5512 3456</a></p></li>
+                    <li><p>Email: <a href="mailto:info@fellex.org">info@fellex.org</a></p></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
