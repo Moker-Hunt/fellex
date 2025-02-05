@@ -29,6 +29,10 @@
             border-radius: 8px;
         }
 
+        
+
+        
+
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -41,6 +45,23 @@
             padding: 1.5rem;
             border-radius: 8px;
             text-align: center;
+        }
+
+        @media(max-width: 620px) {
+            .values-grid{
+                display: flex; /* Используем flexbox вместо grid */
+                flex-wrap: wrap;
+                gap: 0;
+                align-items: center; /* Центрируем по горизонтали */
+                justify-content: center; /* Центрируем по вертикали (если контейнер имеет высоту) */
+                min-height: 100vh; /* Чтобы центрировать по высоте */
+            }
+
+            .value-box {
+                width: 500px;
+                margin: 0 auto;
+            }
+
         }
 
         .value-box h3 {
@@ -137,6 +158,12 @@
         .mission-vision-content {
             width: 50%;
         }
+
+        @media (max-width: 994px) {
+            .mission-vision-content {
+                width: 90%;
+            }
+        }
         
         .mission-vision-box {
             background: var(--light-gray);
@@ -188,6 +215,11 @@
         <nav>
             <div class="logo">
                 <a href="index.html">Fellex</a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>

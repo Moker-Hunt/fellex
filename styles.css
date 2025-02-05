@@ -73,6 +73,24 @@ nav {
     color: var(--dark-accent);
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 100;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
 /* Main Content */
 main {
     width: 100%;
@@ -377,6 +395,17 @@ ul {
     transition: all 0.3s ease;
 }
 
+@media(max-width: 1199px) {
+
+    .value-box:nth-child(4) {
+        grid-column: 2 / 3;
+
+    }
+}
+
+
+
+
 .value-box h3 {
     color: var(--dark-accent);
     margin-bottom: 1rem;
@@ -406,6 +435,25 @@ ul {
 }
 
 /* Compromiso */
+
+@media (max-width: 1079px) {
+
+    .commitment-content, .commitment-image {
+        min-width: 458px;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 540px) {
+
+    .commitment-content, .commitment-image {
+        min-width: 250px;
+        margin: auto;
+    }
+}
+
+
 .commitment-block {
     display: flex;
     align-items: center;
@@ -420,12 +468,17 @@ ul {
 
 .commitment-content {
     flex: 1;
-    padding: 2rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 8px;
     transition: all 0.4s ease;
+}
+
+.commitment-content p {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .commitment-content:hover {
@@ -659,34 +712,134 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+    .tech-block, .market-block {
+        justify-content: center;
+
+    }
+
+    
+    .tech-block img, .market-block img {
+        margin: auto;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--dark-accent);
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
     }
-    
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .two-columns,
+    .grid-container,
+    .features-grid,
+    .mission-vision-container,
+    .commitment-container {
+        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
+    }
+
+    .content-block,
+    .grid-item,
+    .feature-card,
+    .mission-vision-image,
+    .commitment-image {
+        width: 100% !important;
+        max-width: 600px !important;
+        margin: 1rem auto !important;
+    }
+
     .hero h1 {
         font-size: 2rem;
+        padding: 0 1rem;
     }
-    
+
+    main {
+        margin-top: 60px;
+    }
+
     .content {
         padding: 1rem;
     }
-    
-    .mission-vision-container {
-        flex-direction: column;
+
+    .intro-section {
+        align-items: center;
+        flex-wrap: wrap;
     }
 
-    .mission-vision-image {
-        max-width: 100%;
+    .intro-image, .intro-text {
+        width: 90%;
+        min-width: 360px;
+        margin: auto;
     }
 
-    .commitment-container {
-        flex-direction: column;
+    .tech-block, .market-block {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
-    .commitment-image {
-        flex: 0 0 100%;
+    .tech-block img, .tech-block .tech-content, .market-block img, .market-block .market-content{
+        width: 90%;
+        min-width: 320px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .content-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    nav {
+        padding: 0 0.5rem;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 0.5rem;
     }
 }
 
@@ -1004,12 +1157,12 @@ footer {
     transition: transform 0.4s ease;
 }
 
-.market-block ul {
+.market-block ul, .tech-block ul {
     list-style-position: inside;
     padding-left: 1rem;
 }
 
-.market-block li {
+.market-block li, .tech-block li {
     margin: 0.8rem 0;
     transition: color 0.4s ease;
 }
